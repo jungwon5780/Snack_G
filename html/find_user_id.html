@@ -19,6 +19,7 @@
     }
 
     .tap {
+      width: 300px;
       margin: 10px 0px;
       display: flex;
       justify-content: center;
@@ -47,6 +48,10 @@
     }
     .main-tap {
       width: 400px;
+      display:flex;
+      flex-direction: column;
+      /* justify-content: space-between; */
+      align-items:center;
     }
     button {
       border: solid 0.5px gray;
@@ -61,6 +66,11 @@
       border-radius: 0px;
       border: 1px solid black;
     }
+    .align{
+      display:flex;
+      justify-content: space-between;
+      width: 80%;
+    }
   </style>
   <body>
     <div class="main">
@@ -69,12 +79,18 @@
           <div>아이디 찾기</div>
         </div>
         <div class="tap">
-          <div class="id">아이디</div>
-          <input type="text" placeholder=" 아이디 입력" />
+          <div class="align">
+            <div class="name">이름</div>
+            <input type="text" placeholder="이름 입력" />
+          </div>
+
         </div>
         <div class="tap">
-          <div class="email">이메일</div>
-          <input type="text" placeholder=" 이메일 입력" />
+          <div class="align">
+            <div class="email">이메일</div>
+            <input type="text" placeholder=" 이메일 입력" />
+          </div>
+          
         </div>
         <div class="tap">
           <button class="pwfinder">아이디 찾기</button>
