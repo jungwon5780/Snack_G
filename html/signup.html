@@ -12,6 +12,7 @@
       height: 80vh;
       justify-content: center;
       align-items: center;
+      width: 100%;
     }
     .main {
       /* border: solid 1px #000; */
@@ -27,10 +28,6 @@
 
     .tap:first-child {
       justify-content: center;
-    }
-
-
-    .tap:first-child {
       margin-bottom: 50px;
       font-size: 25px;
       font-weight: bold;
@@ -40,6 +37,7 @@
     .pwfinder .cancel {
       padding: 10px 15px;
     }
+
     .tap:last-child {
       margin-top: 30px;
       display: flex;
@@ -87,19 +85,26 @@
         </div>
         <div class="tap">
           <div class="email">비밀번호</div>
-          <input type="text" placeholder=" 비밀번호를 입력하세요" />
+          <input type="password" placeholder=" 비밀번호를 입력하세요" />
         </div>
         <div class="tap">
           <div class="email">비밀번호 확인</div>
-          <input type="text" placeholder=" 비밀번호를 다시 입력하세요" />
+          <input type="password" placeholder=" 비밀번호를 다시 입력하세요" />
         </div>
         <div class="tap">
           <div class="email">이메일</div>
-          <input type="text" placeholder=" 이메일을 입력하세요" />
+          <input type="email" placeholder=" 이메일을 입력하세요" />
         </div>
         <div class="tap">
-          <button class="pwfinder">회원가입 완료</button>
-          <button class="cancel">취소</button>
+          <button
+            class="pwfinder"
+            onclick="location.href='/html/main_login.html'"
+          >
+            회원가입 완료
+          </button>
+          <button class="cancel" onClick="location.href='/index.html'">
+            취소
+          </button>
         </div>
       </div>
     </div>
