@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>투표 결과</title>
+    <link
+      rel="stylesheet"
+      href="https://fontawesome.com/icons/clock?f=classic&s=light"
+    />
     <style>
       /* 필요한 CSS 스타일을 추가합니다. */
       body {
@@ -35,38 +39,81 @@
       }
 
       .box {
-        width: 200px; /* 박스의 가로 길이 */
+        width: 80px; /* 박스의 가로 길이 */
         height: 30px; /* 박스의 세로 길이 */
         border: 1px solid black; /* 박스 테두리 */
+        border-radius: 5px;
         display: flex;
         align-items: center;
+        justify-content: space-evenly;
+      }
+
+      .photo {
+        margin-top: 10px;
+        margin-left: 10px;
+        height: 150px;
+        width: 250px;
+      }
+
+      .back {
+        background-color: #dbdbdb;
+        width: 100%;
+        height: 20px;
+      }
+
+      .ground {
+        background-color: #4caf50;
+        width: 70%;
+        height: 100%;
+      }
+
+      .last {
+        display: flex;
+        align-items: end;
+        justify-content: flex-end;
+        margin-bottom: 5px;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 5px;
+      }
+
+      .text {
+        width: 50px;
+      }
+
+      .picture {
+        width: 100px;
+      }
+
+      .title {
+        display: flex;
+        justify-content: center;
       }
     </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div>
-      <h1 style="display: flex; justify-content: center">투표 결과</h1>
-      <div
-        style="
-          display: flex;
-          justify-content: space-between;
-          width: 100%;
-          margin-bottom: 5px;
-        "
-      >
+      <h1 class="title">투표 결과</h1>
+      <div class="top">
+        <!--백앤드 작업 필요-->
+        <!-- 타이머, 이전결과 -->
+
         <div class="box">
-          <div>D-0 00:00:00</div>
+          <i class="fa fa-clock"></i>
+          <div>D-0</div>
         </div>
-        <div
-          style="
-            display: flex;
-            align-items: end;
-            justify-content: flex-end;
-            margin-bottom: 5px;
-          "
-        >
-          [이전 결과] 상품명 > 상품명 > 상품명 > 상품명
-        </div>
+        <div class="last">[이전 결과] 상품명 > 상품명 > 상품명 > 상품명</div>
       </div>
 
       <!-- 투표 결과 표 -->
@@ -79,61 +126,42 @@
             <th style="width: 50px">순위</th>
           </tr>
           <tr>
-            <td style="width: 100px">
-              <img
-                src="/images/육개장.png"
-                width="250"
-                height="150"
-                style="margin-top: 10px; margin-left: 10px"
-              />
+            <td class="picture">
+              <img class="photo" src="/images/육개장.png" />
             </td>
-            <td style="width: 50px">육개장</td>
+            <td class="text">육개장</td>
             <td>
-              <div style="background-color: #dbdbdb; width: 100%; height: 20px">
-                <div
-                  style="background-color: #4caf50; width: 70%; height: 100%"
-                ></div>
+              <div class="back">
+                <div class="ground"></div>
               </div>
             </td>
-            <td style="width: 50px">1</td>
+            <td class="text">1</td>
           </tr>
+
           <tr>
-            <td style="width: 100px">
-              <img
-                src="/images/몽쉘.png"
-                width="250"
-                height="150"
-                style="margin-top: 10px; margin-left: 10px"
-              />
+            <td class="picture">
+              <img class="photo" src="/images/몽쉘.png" />
             </td>
-            <td style="width: 50px">몽쉘</td>
+            <td class="text">몽쉘</td>
             <td>
-              <div style="background-color: #dbdbdb; width: 100%; height: 20px">
-                <div
-                  style="background-color: #4caf50; width: 60%; height: 100%"
-                ></div>
+              <div class="back">
+                <div class="ground"></div>
               </div>
             </td>
-            <td style="width: 50px">2</td>
+            <td class="text">2</td>
           </tr>
+
           <tr>
-            <td style="width: 100px">
-              <img
-                src="/images/몬스터.png"
-                width="250"
-                height="150"
-                style="margin-top: 10px; margin-left: 10px"
-              />
+            <td class="picture">
+              <img class="photo" src="/images/몬스터.png" />
             </td>
-            <td style="width: 50px">몬스터</td>
+            <td class="text">몬스터</td>
             <td>
-              <div style="background-color: #dbdbdb; width: 100%; height: 20px">
-                <div
-                  style="background-color: #4caf50; width: 50%; height: 100%"
-                ></div>
+              <div class="back">
+                <div class="ground"></div>
               </div>
             </td>
-            <td style="width: 50px">3</td>
+            <td class="text">3</td>
           </tr>
         </thead>
       </table>
