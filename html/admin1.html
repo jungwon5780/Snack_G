@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>admin1</title>
+    <link rel="stylesheet" href="/css/admin/admin1.css" />
+  </head>
+
+  <body>
+    <!-- admin1 admin2 admin3 화면 병합 -->
+    <!-- 상단 고정바 -->
+    <div class="main">
+      <!-- 버튼 선택시 다른 화면으로 전환  -->
+
+      <div class="screen">
+        <div class="vote-setting-tap period">
+          <img src="/images/profile.jpg" />
+          <div class="set1">
+            <div>| 투표 기간 및 시간 설정 |</div>
+            <div class="period-setting">
+              <input type="date" value="2022-08-05" />
+              <div>~</div>
+              <input type="date" value="2022-09-05" />
+            </div>
+            <!-- JS나 REACT 사용해서 "오전", "오후" 글자 삭제 -->
+            <div class="period-setting">
+              <input type="time" value="09:00" />
+              <div>~</div>
+              <input type="time" value="16:00" />
+            </div>
+            <div
+              class="period-setting"
+              style="display: flex; justify-content: space-between"
+            >
+              <div class="name">| 투표권 개수 지정 |</div>
+              <div>
+                <input
+                  type="text"
+                  style="
+                    width: 20%;
+                    margin-right: 5px;
+                    text-align: center;
+                    background-color: white;
+                    color: black;
+                  "
+                  value="3"
+                />
+                <div>개</div>
+              </div>
+            </div>
+            <!-- 등록 버튼 사용시 투표권 개수지정되는 프로그램 추가 -->
+            <div class="period-setting">
+              <div><button>등록</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="vote-setting-tap order">
+          <div style="font-size: 15px; font-weight: 400">| 발주처 |</div>
+          <!-- table 행 추가 밑 삭제 기능 추가 -->
+          <table>
+            <tr>
+              <td>&nbsp;</td>
+              <td>유통사</td>
+              <td>수량</td>
+              <td>단가</td>
+              <td>금액</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div class="vote-setting-tap wildcard">
+          <div style="font-size: 15px">| 와일드카드 사용 현황 |</div>
+          <div style="display: flex; align-items: center">
+            <form
+              aria-placeholder="부서명"
+              style="display: flex; align-items: center"
+            >
+              <!-- select로 부서 바꿀 시 테이블도 변경 -->
+              <select>
+                <option>총무부</option>
+                <option>인사부</option>
+                <option>생산부</option>
+                <option>회계부</option>
+                <option>감사부</option>
+              </select>
+            </form>
+            <div>
+              <input type="date" value="2022-08-05" />
+              <div>~</div>
+              <input type="date" value="2022-09-05" />
+            </div>
+          </div>
+          <!-- table 행 추가 밑 삭제 기능 추가 -->
+          <table>
+            <tr>
+              <td>&nbsp;</td>
+              <td>부서</td>
+              <td>이름</td>
+              <td>부여 횟수</td>
+              <td>비고</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" checked /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" checked /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+          <div
+            style="
+              display: flex;
+              justify-content: flex-end;
+              margin-right: 120px;
+            "
+          >
+            <button>와일드카드 부여하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

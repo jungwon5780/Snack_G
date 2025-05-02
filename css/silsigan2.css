@@ -1,0 +1,128 @@
+.status_main {
+  width: 80%;
+  max-width: 1000px;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px auto;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.status_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 10px;
+}
+
+.status .item {
+  margin-bottom: 15px;
+}
+
+.status_list {
+  margin: 10px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  font-weight: 300;
+}
+
+.status .bar {
+  background-color: #ccc;
+  border-radius: 10px;
+  width: 70%;
+  height: 10px;
+  margin-top: 5px;
+  margin-left: 30px;
+}
+
+.status .fill {
+  background-color: #555;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.status_main .prev {
+  display: flex;
+  justify-content: flex-end;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  background-color: rgba(255, 0, 0, 0.7);
+  border-radius: 20px;
+  width: 1440px;
+  /* border: 1px solid #000; */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  width: 1440px;
+  border: 1px solid #000;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.title {
+  color: white;
+  font-size: 50px;
+}
+
+.timer {
+  border: 1px solid #000;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 5px 10px;
+}
+
+.fa-thumbs-down {
+  transform: scaleX(-1);
+}
+
+.item > div:first-child {
+  width: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+.close {
+  padding: 0px 10px;
+  position: fixed;
+  color: white;
+  margin-left: 950px;
+  font-size: 60px;
+  text-decoration: none;
+}
