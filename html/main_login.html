@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스낵 그랑프리</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const userIcon = document.getElementById('user-icon');
+        const loginBox = document.querySelector('.login_box');
+
+        let isVisible = false;
+
+        userIcon.addEventListener('click', function (e) {
+          e.stopPropagation();
+          isVisible = !isVisible;
+          loginBox.style.display = isVisible ? 'block' : 'none';
+        });
+
+        document.addEventListener('click', function (e) {
+          if (!loginBox.contains(e.target) && !userIcon.contains(e.target)) {
+            loginBox.style.display = 'none';
+            isVisible = false;
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- top -->
+    <div class="nav">
+      <div class="nav_logo">
+        <label>스낵 그랑프리</label>
+      </div>
+      <div class="nav_icon">
+        <div id="user-icon"><i class="fa-solid fa-circle-user"></i></div>
+        <div>
+          <i
+            class="fa-solid fa-bell"
+            onClick="location.href='/html/card.html'"
+          ></i>
+        </div>
+        <div>
+          <i
+            class="fa-solid fa-chart-simple"
+            onClick="location.href='/html/result.html'"
+          ></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- 검색 -->
+    <div class="search">
+      <input type="text" class="searchTerm" placeholder="검색어 입력" />
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+
+    <!-- 카테고리 아이콘 -->
+    <div class="category">
+      <div class="category_snack">
+        <i
+          class="fa-solid fa-border-all"
+          onClick="location.href='/html/admin.html'"
+        ></i>
+        <label> 전체 </label>
+      </div>
+      <div class="category_snack">
+        <i
+          class="fa-solid fa-cookie-bite"
+          onClick="location.href='/html/admin.html'"
+        ></i>
+        <label> 과자 </label>
+      </div>
+      <div class="category_snack">
+        <i
+          class="fa-solid fa-mug-saucer"
+          onClick="location.href='/html/admin.html'"
+        >
+          <a href="/index.html"></a>
+        </i>
+        <label> 음료 </label>
+      </div>
+    </div>
+
+    <!-- 투표 현황 -->
+    <div class="status_main">
+      <div class="status">
+        <div class="status_title">
+          <label>1등 과자 투표 현황</label>
+          <button
+            class="vote_btn"
+            onClick="location.href='/html/vote-realtime.html'"
+          >
+            투표하기
+          </button>
+        </div>
+
+        <div class="status_list">
+          <div class="item">
+            <span>몬스터</span>
+            <div class="bar">
+              <div class="fill" style="width: 70%"></div>
+            </div>
+          </div>
+          <div class="item">
+            <span>과자</span>
+            <div class="bar">
+              <div class="fill" style="width: 50%"></div>
+            </div>
+          </div>
+          <div class="item">
+            <span>초콜릿</span>
+            <div class="bar">
+              <div class="fill" style="width: 80%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prev">
+        <label> [이전 결과] </label>
+        <label> 상품명 > 상품명 > 상품명 > 상품명 </label>
+      </div>
+    </div>
+
+    <!-- best 과자 -->
+    <div class="best">
+      <div class="section_title">
+        <label>스낵 그랑프리</label>
+      </div>
+
+      <div class="snack_list">
+        <div class="snack_card">
+          <div class="snack_image">
+            <img src="/images/홈런볼.jpeg" />
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="snack_title">
+            <div>
+              <label> 상품명</label>
+            </div>
+            <div>
+              <label> #과자 #초콜릿 </label>
+            </div>
+            <div>
+              <button class="vote_btn" onClick="location.href='/index.html'">
+                투표하기
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="snack_card">
+          <div class="snack_image">
+            <img src="/images/예감.jpeg" />
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="snack_title">
+            <div>
+              <label> 상품명</label>
+            </div>
+            <div>
+              <label> #과자 #초콜릿 </label>
+            </div>
+            <div>
+              <button class="vote_btn">
+                <a href="/index.html"></a>
+
+                투표하기
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="snack_card">
+          <div class="snack_image">
+            <img src="/images/오레오.jpeg" />
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="snack_title">
+            <div>
+              <label> 상품명</label>
+            </div>
+            <div>
+              <label> #과자 #초콜릿 </label>
+            </div>
+            <div><button class="vote_btn">투표하기</button></div>
+          </div>
+        </div>
+        <div class="snack_card">
+          <div class="snack_image">
+            <img src="/images/나!.jpeg" />
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="snack_title">
+            <div>
+              <label> 상품명</label>
+            </div>
+            <div>
+              <label> #과자 #초콜릿 </label>
+            </div>
+            <div><button class="vote_btn">투표하기</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- hidden -->
+    <div class="login_box" id="loginBox" style="width: 150px">
+      <div class="my_now">
+        <button class="card" onClick="location.href='/html/card.html'">
+          와일드 카드
+        </button>
+        <button class="card" onClick="location.href='/html/mypage.html'">
+          내 정보
+        </button>
+        <button class="card" onClick="location.href='/index.html'">
+          로그아웃
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
