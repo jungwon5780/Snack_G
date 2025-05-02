@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>투표 결과</title>
+    <style>
+      /* 필요한 CSS 스타일을 추가합니다. */
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+      }
+      body > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 3px 3px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .box {
+        width: 200px; /* 박스의 가로 길이 */
+        height: 30px; /* 박스의 세로 길이 */
+        border: 1px solid black; /* 박스 테두리 */
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 style="display: flex; justify-content: center">투표 결과</h1>
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          margin-bottom: 5px;
+        "
+      >
+        <div class="box">
+          <div>D-0 00:00:00</div>
+        </div>
+        <div
+          style="
+            display: flex;
+            align-items: end;
+            justify-content: flex-end;
+            margin-bottom: 5px;
+          "
+        >
+          [이전 결과] 상품명 > 상품명 > 상품명 > 상품명
+        </div>
+      </div>
+
+      <!-- 투표 결과 표 -->
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 100px">이미지</th>
+            <th style="width: 50px">이름</th>
+            <th style="width: 300px">비율</th>
+            <th style="width: 50px">순위</th>
+          </tr>
+          <tr>
+            <td style="width: 100px">
+              <img
+                src="/images/육개장.png"
+                width="250"
+                height="150"
+                style="margin-top: 10px; margin-left: 10px"
+              />
+            </td>
+            <td style="width: 50px">육개장</td>
+            <td>
+              <div style="background-color: #dbdbdb; width: 100%; height: 20px">
+                <div
+                  style="background-color: #4caf50; width: 70%; height: 100%"
+                ></div>
+              </div>
+            </td>
+            <td style="width: 50px">1</td>
+          </tr>
+          <tr>
+            <td style="width: 100px">
+              <img
+                src="/images/몽쉘.png"
+                width="250"
+                height="150"
+                style="margin-top: 10px; margin-left: 10px"
+              />
+            </td>
+            <td style="width: 50px">몽쉘</td>
+            <td>
+              <div style="background-color: #dbdbdb; width: 100%; height: 20px">
+                <div
+                  style="background-color: #4caf50; width: 60%; height: 100%"
+                ></div>
+              </div>
+            </td>
+            <td style="width: 50px">2</td>
+          </tr>
+          <tr>
+            <td style="width: 100px">
+              <img
+                src="/images/몬스터.png"
+                width="250"
+                height="150"
+                style="margin-top: 10px; margin-left: 10px"
+              />
+            </td>
+            <td style="width: 50px">몬스터</td>
+            <td>
+              <div style="background-color: #dbdbdb; width: 100%; height: 20px">
+                <div
+                  style="background-color: #4caf50; width: 50%; height: 100%"
+                ></div>
+              </div>
+            </td>
+            <td style="width: 50px">3</td>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </body>
+</html>

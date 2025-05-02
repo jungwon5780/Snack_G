@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>스낵 그랑프리</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/main.css" />
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const userIcon = document.getElementById('user-icon');
+      const loginBox = document.querySelector('.login_box');
+
+      // 클릭으로 로그인 박스 보이기
+      // // 로그인 박스가 보이는지 true, false 판단 변수
+      // let isVisible = false;
+
+      // // 로그인 박스가 보이는지 판단
+      // userIcon.addEventListener('click', function (e) {
+      //   e.stopPropagation();
+      //   isVisible = !isVisible;
+      //   // 로그인 박스가 보이면 none 으로 숨기고 보이지 않으면 block으로 보여주는 코드
+      //   loginBox.style.display = isVisible ? 'block' : 'none';
+      // });
+
+      // // 로그인 박스 외 공간을 클릭할 시 박스가 보이지 않도록 none 처리
+      // document.addEventListener('click', function (e) {
+      //   if (!loginBox.contains(e.target) && !userIcon.contains(e.target)) {
+      //     loginBox.style.display = 'none';
+      //     isVisible = false;
+      //   }
+      // });
+
+      //마우스 호버 시에만 로그인 박스 block
+      let hoverimeout;
+
+      //마우스 호버 시 로그인 박스를 block으로 표시시
+      function showLoginBox() {
+        clearTimeout(hoverimeout);
+        loginBox.style.display = 'block';
+      }
+
+      //마우스 호버 하고 10초가 넘어갈 시 로그인 박스를 none으로 표시
+      function hideLoginBox() {
+        hoverimeout = setTimeout(() => {
+          loginBox.style.display = 'none';
+        }, 500);
+      }
+
+      userIcon.addEventListener('mouseenter', showLoginBox);
+      userIcon.addEventListener('mouseleave', hideLoginBox);
+
+      loginBox.addEventListener('mouseenter', showLoginBox);
+      loginBox.addEventListener('mouseleave', hideLoginBox);
+    });
+
+  </script>
+</head>
+
+<body>
+
+  <!-- top -->
+  <div class="nav">
+    <div class="nav_logo">
+      <label onClick="location.href='/html/main_login.html'">스낵 그랑프리</label>
+    </div>
+    <div class="nav_icon">
+      <div id="user-icon"><i class="fa-solid fa-circle-user"></i></div>
+      <div>
+        <i class="fa-solid fa-bell" onClick="location.href='/html/card.html'"></i>
+      </div>
+      <div>
+        <i class="fa-solid fa-chart-simple" onClick="location.href='/html/result.html'"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- 검색 -->
+  <div class="search">
+    <input type="text" class="searchTerm" placeholder="검색어 입력" />
+    <button type="submit" class="searchButton">
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
+
+  <!-- 카테고리 아이콘 -->
+  <!-- 아이콘 클릭 시 이어지는는 페이지 개발 필요 -->
+  <div class="category">
+    <div class="category_snack">
+      <i class="fa-solid fa-border-all" onClick="location.href='/html/admin1.html'"></i>
+      <label> 전체 </label>
+    </div>
+    <div class="category_snack">
+      <i class="fa-solid fa-cookie-bite" onClick="location.href='/html/admin2.html'"></i>
+      <label> 과자 </label>
+    </div>
+    <div class="category_snack">
+      <i class="fa-solid fa-mug-saucer" onClick="location.href='/html/admin3.html'">
+        <a href="/index.html"></a>
+      </i>
+      <label> 음료 </label>
+    </div>
+  </div>
+
+  <!-- 투표 현황 -->
+  <div class="status_main">
+    <div class="status">
+      <div class="status_title">
+        <label>1등 과자 투표 현황</label>
+        <button class="vote_btn" onClick="location.href='/html/vote-realtime.html'"> 투표하기 </button>
+      </div>
+
+      <div class="status_list">
+        <div class="item">
+          <span>몬스터</span>
+          <!-- 백엔드 개발 시 id 추가 및 fill class 삭제 -->
+          <div class="bar">
+            <div class="fill" style="width: 70%"></div>
+          </div>
+        </div>
+        <div class="item">
+          <span>과자</span>
+          <!-- 백엔드 개발 시 id 추가 및 fill class 삭제 -->
+          <div class="bar">
+            <div class="fill" style="width: 50%"></div>
+          </div>
+        </div>
+        <div class="item">
+          <span>초콜릿</span>
+          <!-- 백엔드 개발 시 id 추가 및 fill class 삭제 -->
+          <div class="bar">
+            <div class="fill" style="width: 80%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prev">
+      <label> [이전 결과] </label>
+      <!-- 백엔드 개발 시 해당 라벨에 id 추가 필요 -->
+      <label> 상품명 > 상품명 > 상품명 > 상품명 </label>
+    </div>
+  </div>
+
+  <!-- best 과자 -->
+  <div class="best">
+    <div class="section_title">
+      <label>스낵 그랑프리</label>
+    </div>
+    <!-- 모두 백엔드 데이터 연동 필요 -->
+    <div class="snack_list">
+      <div class="snack_card">
+        <div class="snack_image">
+          <img src="/images/초콜릿4.jpg" />
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <div class="snack_title">
+          <div>
+            <label> 상품명</label>
+          </div>
+          <!-- 해시태그가 있으다면 해시태그를 넣기 위한 편집 화면도 필요할 것인지, 
+                  또는 외부 데이터를 가져오는 것이기 때문에 해당 데이터들에 있는 태그들을 연동을 시킬 것인지.-->
+          <div>
+            <label> #과자 #초콜릿 </label>
+          </div>
+          <div>
+            <!-- 버튼 선택 시 백엔드로 넘어가는 모션 필요 -->
+            <button class="vote_btn" onClick="location.href='/index.html'"> 투표하기 </button>
+          </div>
+        </div>
+      </div>
+      <div class="snack_card">
+        <div class="snack_image">
+          <img src="/images/초콜릿1.jpeg" />
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <div class="snack_title">
+          <div>
+            <label> 상품명</label>
+          </div>
+          <div>
+            <label> #과자 #초콜릿 </label>
+          </div>
+          <div>
+            <button class="vote_btn">
+              <a href="/index.html"></a>
+              투표하기
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="snack_card">
+        <div class="snack_image">
+          <img src="/images/초콜릿2.jpeg" />
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <div class="snack_title">
+          <div>
+            <label> 상품명</label>
+          </div>
+          <div>
+            <label> #과자 #초콜릿 </label>
+          </div>
+          <div><button class="vote_btn">투표하기</button></div>
+        </div>
+      </div>
+      <div class="snack_card">
+        <div class="snack_image">
+          <img src="/images/초콜릿3.jpeg" />
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <div class="snack_title">
+          <div>
+            <label> 상품명</label>
+          </div>
+          <div>
+            <label> #과자 #초콜릿 </label>
+          </div>
+          <div><button class="vote_btn">투표하기</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- hidden -->
+  <div class="login_box" id="loginBox">
+    <div style="padding: 0; margin: 0">
+      <div class="input_row" style="margin-bottom: 5px">
+        <label>아이디</label>
+        <input type="text" placeholder="아이디" />
+      </div>
+      <div class="input_row">
+        <label>비밀번호</label>
+        <input type="password" placeholder="비밀번호" />
+      </div>
+    </div>
+    <div class="button_row">
+      <button onClick="location.href='/html/find_user_id.html'">
+        아이디 찾기
+      </button>
+      <button onClick="location.href='/html/pw.html'">비밀번호 찾기</button>
+      <button onClick="location.href='/html/signup.html'">회원가입</button>
+    </div>
+  </div>
+</body>
+
+</html>

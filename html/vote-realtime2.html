@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>투표임박</title>
+    <link rel="stylesheet" href="/css/silsigan2.css" />
+    <!-- <style>
+      .status_main {
+        width: 80%;
+        max-width: 1000px;
+      }
+
+      .status {
+        display: flex;
+        flex-direction: column;
+        background-color: #f0f0f0;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 20px auto;
+        margin-bottom: 5px;
+        box-sizing: border-box;
+      }
+
+      .status_title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px 10px;
+      }
+
+      .status .item {
+        margin-bottom: 15px;
+      }
+
+      .status_list {
+        margin: 10px;
+      }
+
+      .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+        font-weight: 300;
+      }
+
+      .status .bar {
+        background-color: #ccc;
+        border-radius: 10px;
+        width: 70%;
+        height: 10px;
+        margin-top: 5px;
+        margin-left: 30px;
+      }
+
+      .status .fill {
+        background-color: #555;
+        height: 100%;
+        border-radius: 10px;
+      }
+
+      .status_main .prev {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      body {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .main {
+        background-color: rgba(255, 0, 0, 0.7);
+        border-radius: 20px;
+        width: 1440px;
+        /* border: 1px solid #000; */
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      /* 
+      body {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .main {
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 20px;
+        width: 1440px;
+        border: 1px solid #000;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      } */
+
+      .title {
+        color: white;
+        font-size: 50px;
+      }
+
+      .timer {
+        border: 1px solid #000;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 5px 10px;
+      }
+
+      .fa-thumbs-down {
+        transform: scaleX(-1);
+      }
+
+      .item > div:first-child {
+        width: 80px;
+        display: flex;
+        justify-content: space-around;
+      }
+      .close {
+        padding: 0px 10px;
+        position: fixed;
+        color: white;
+        margin-left: 950px;
+        font-size: 60px;
+        text-decoration: none;
+      }
+    </style> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- 전체 팝업창 -->
+    <div class="main">
+      <div class="title">투표 실시간</div>
+      <div class="timer">
+        <i class="fa-regular fa-clock"></i>
+        <div>D-0</div>
+        <div>00:05:13</div>
+      </div>
+      <div class="status_main">
+        <div class="status">
+          <div class="status_title">
+            <label>과자 투표 현황</label>
+          </div>
+
+          <div class="status_list">
+            <div class="item">
+              <div>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <i
+                  class="fa-regular fa-thumbs-down"
+                  style="margin-right: 10px"
+                ></i>
+              </div>
+
+              <span>육개장</span>
+              <div class="bar">
+                <div class="fill" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <i
+                  class="fa-regular fa-thumbs-down"
+                  style="margin-right: 10px"
+                ></i>
+              </div>
+              <span>몽쉘</span>
+              <div class="bar">
+                <div class="fill" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <i
+                  class="fa-regular fa-thumbs-down"
+                  style="margin-right: 10px"
+                ></i>
+              </div>
+              <span>사브레</span>
+              <div class="bar">
+                <div class="fill" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <i
+                  class="fa-regular fa-thumbs-down"
+                  style="margin-right: 10px"
+                ></i>
+              </div>
+              <span>예감</span>
+              <div class="bar">
+                <div class="fill" style="width: 50%"></div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <i
+                  class="fa-regular fa-thumbs-down"
+                  style="margin-right: 10px"
+                ></i>
+              </div>
+              <span>비쵸비</span>
+              <div class="bar">
+                <div class="fill" style="width: 40%"></div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <i
+                  class="fa-regular fa-thumbs-down"
+                  style="margin-right: 10px"
+                ></i>
+              </div>
+              <span>니!</span>
+              <div class="bar">
+                <div class="fill" style="width: 30%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="status_main">
+        <div class="status">
+          <div class="status_title">
+            <label>음료수 투표 현황</label>
+          </div>
+
+          <div class="status_list">
+            <div class="item">
+              <div>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <i
+                  class="fa-regular fa-thumbs-down"
+                  style="margin-right: 10px"
+                ></i>
+              </div>
+              <span>몬스터</span>
+              <div class="bar">
+                <div class="fill" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <i
+                  class="fa-regular fa-thumbs-down"
+                  style="margin-right: 10px"
+                ></i>
+              </div>
+              <span>더킹</span>
+              <div class="bar">
+                <div class="fill" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <i
+                  class="fa-regular fa-thumbs-down"
+                  style="margin-right: 10px"
+                ></i>
+              </div>
+              <span>피크닉</span>
+              <div class="bar">
+                <div class="fill" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="item">
+              <div>
+                <i class="fa-regular fa-thumbs-up"></i>
+                <i
+                  class="fa-regular fa-thumbs-down"
+                  style="margin-right: 10px"
+                ></i>
+              </div>
+              <span>솔의눈</span>
+              <div class="bar">
+                <div class="fill" style="width: 50%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="close" href="/index.html">X</a>
+  </body>
+</html>

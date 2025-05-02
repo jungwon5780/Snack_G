@@ -1,0 +1,324 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+i {
+  cursor: pointer;
+}
+
+/* 메뉴 */
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.nav_logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav_logo label {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav_icon {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.nav_icon i {
+  font-size: 20px;
+}
+
+/* 검색색 */
+.search {
+  width: 300px;
+  position: relative;
+  display: flex;
+  margin: 20px;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 2px solid #242424;
+  border-right: none;
+  padding: 5px 15px;
+  height: 20px;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: #242424;
+}
+
+.searchButton {
+  width: 46px;
+  height: 34px;
+  border: 1px solid #242424;
+  background: #242424;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 20px 20px 0;
+  padding-right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* 카테고리리 */
+.wrap {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.category {
+  display: flex;
+  margin: 10px 0 20px 0;
+}
+
+.category i {
+  margin: 0 10px;
+  font-size: 40px;
+}
+
+.category label {
+  font-size: 12px;
+}
+
+.category_snack {
+  display: flex;
+  flex-direction: column;
+}
+
+.category_snack label {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* 과자 투표 현황 */
+.status_main {
+  width: 80%;
+  max-width: 1000px;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px auto;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.status_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 10px;
+}
+
+.status .item {
+  margin-bottom: 10px;
+}
+
+.status_list {
+  margin: 10px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.status .bar {
+  background-color: #ccc;
+  border-radius: 10px;
+  width: 85%;
+  height: 10px;
+  margin-top: 5px;
+}
+
+.status .fill {
+  background-color: #555;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.status_main .prev {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* best 과자자 */
+.best {
+  padding: 20px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section_title {
+  margin-bottom: 20px;
+}
+
+.snack_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 10px;
+  gap: 20px;
+}
+
+.snack_card {
+  width: 48%;
+  max-width: 350px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.snack_card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.vote_btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.snack_card {
+  display: flex;
+  align-items: center;
+}
+
+.snack_image {
+  width: 100px;
+  height: 100px;
+  background-color: #f2f2f2;
+  position: relative;
+  border: 1px solid #ccc;
+  flex-shrink: 0;
+}
+
+.snack_image i {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: #666;
+}
+
+.snack_title {
+  margin-left: 20px;
+}
+
+/* 로그인 박스스 */
+.login_box {
+  width: 300px;
+  height: auto;
+  border: 1px solid #2b2b2b;
+  border-radius: 25px;
+  padding: 20px 30px;
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #aaa;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.input_row {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.input_row input {
+  width: 200px;
+  height: 26px;
+}
+
+.button_row {
+  display: flex;
+  width: 100%;
+}
+
+.button_row button {
+  flex: 1;
+  padding: 6px 0;
+  border: 1px solid #333;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+  border-left: none;
+}
+
+.button_row button:hover {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+.button_row button:first-child {
+  border-left: 1px solid #333;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.button_row button:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* 로그인 후 내 계정 */
+.my_now {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.card {
+  height: 30px;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+
+.card:hover {
+  background-color: #cfcfcf;
+  cursor: pointer;
+}

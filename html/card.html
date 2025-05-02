@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>와일드카드 탭</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      body > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 1440px;
+      }
+      .search-container {
+        width: 500px;
+        margin: 50px auto;
+        display: flex;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        overflow: hidden;
+      }
+
+      .search-input {
+        flex: 1;
+        padding: 10px 15px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+      }
+
+      .search-button {
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .search-button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        border-radius: 20px;
+        max-width: 1440px;
+        height: 850px;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      "
+    >
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <div style="font-size: 30px; display: flex; justify-content: center">
+          와일드 카드
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #fff;
+            width: 300px;
+          "
+        >
+          먹고 싶었지만 투표에서 밀려났던 부식!<br />오늘이 기회입니다!
+          선택해주세요!
+        </div>
+      </div>
+      <div class="search-container">
+        <input type="text" class="search-input" />
+        <button class="search-button">검색</button>
+      </div>
+
+      <div>
+        <div style="font-size: 25px">나의 찜 목록</div>
+        <div style="display: flex">
+          <div>
+            <div>
+              <img
+                src="/images/몽쉘.png"
+                width="150"
+                height="150"
+                style="margin-top: 10px; margin-left: 10px"
+              />
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+              "
+            >
+              <div>상품명<br />#과자#초콜렛</div>
+              <button style="height: 25px">담기</button>
+            </div>
+          </div>
+          <div>
+            <div>
+              <img
+                src="/images/오레오.jpeg"
+                width="150"
+                height="150"
+                style="margin-top: 10px; margin-left: 10px"
+              />
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+              "
+            >
+              <div>상품명<br />#과자#초콜렛</div>
+              <button style="height: 25px">담기</button>
+            </div>
+          </div>
+          <div>
+            <div>
+              <img
+                src="/images/초콜릿1.jpeg"
+                width="150"
+                height="150"
+                style="margin-top: 10px; margin-left: 10px"
+              />
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+              "
+            >
+              <div>상품명<br />#과자#초콜렛</div>
+              <button style="height: 25px">담기</button>
+            </div>
+          </div>
+          <div>
+            <div>
+              <img
+                src="/images/초콜릿2.jpeg"
+                width="150"
+                height="150"
+                style="margin-top: 10px; margin-left: 10px"
+              />
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+              "
+            >
+              <div>상품명<br />#과자#초콜렛</div>
+              <button style="height: 25px">담기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 25px; margin-top: 70px">이전 주 BEST 목록</div>
+        <div style="display: flex">
+          <div>
+            <div>
+              <img
+                src="/images/초콜릿3.jpeg"
+                width="150"
+                height="150"
+                style="margin-top: 10px; margin-left: 10px"
+              />
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+              "
+            >
+              <div>상품명<br />#과자#초콜렛</div>
+              <button style="height: 25px">담기</button>
+            </div>
+          </div>
+          <div>
+            <div>
+              <img
+                src="/images/몬스터.png"
+                width="150"
+                height="150"
+                style="margin-top: 10px; margin-left: 10px"
+              />
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+              "
+            >
+              <div>상품명<br />#과자#초콜렛</div>
+              <button style="height: 25px">담기</button>
+            </div>
+          </div>
+          <div>
+            <div>
+              <img
+                src="/images/예감.jpeg"
+                width="150"
+                height="150"
+                style="margin-top: 10px; margin-left: 10px"
+              />
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+              "
+            >
+              <div>상품명<br />#과자#초콜렛</div>
+              <button style="height: 25px">담기</button>
+            </div>
+          </div>
+          <div>
+            <div>
+              <img
+                src="/images/육개장.png"
+                width="150"
+                height="150"
+                style="margin-top: 10px; margin-left: 10px"
+              />
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+              "
+            >
+              <div>상품명<br />#과자#초콜렛</div>
+              <button style="height: 25px">담기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
